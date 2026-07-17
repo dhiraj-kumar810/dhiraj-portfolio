@@ -1,132 +1,211 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dhiraj Kumar | Portfolio</title>
-<link rel="stylesheet" href="style.css">
-</head>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
+}
 
-<body>
+body{
+    background:#0f172a;
+    color:#ffffff;
+}
 
-<nav>
-    <div class="logo">Dhiraj Kumar</div>
+/* Navbar */
 
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+}
 
-<section class="hero">
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#38bdf8;
+}
 
-    <img src="profile.png" alt="Profile">
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
 
-    <h1>Dhiraj Kumar</h1>
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
 
-    <h2>Aspiring Software Engineer</h2>
+nav a:hover{
+    color:#38bdf8;
+}
 
-    <p>
-        Python Developer | AI Enthusiast |
-        Web Developer | B.Tech CSE Student
-    </p>
+/* Hero */
 
-    <a href="#contact" class="btn">Hire Me</a>
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
+}
 
-</section>
+.hero img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 30px rgba(56,189,248,.5);
+}
 
-<section id="about">
+.hero h1{
+    font-size:60px;
+    margin-top:20px;
+}
 
-    <h2>About Me</h2>
+.hero h2{
+    color:#38bdf8;
+    margin-top:10px;
+}
 
-    <p>
-        Hello! I am Dhiraj Kumar, a B.Tech Computer Science student.
-        I enjoy building websites, learning Python, AI and solving
-        programming problems. My goal is to become a Software Engineer.
-    </p>
+.hero p{
+    margin-top:15px;
+    max-width:700px;
+    font-size:18px;
+}
 
-</section>
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
 
-<section id="skills">
+.btn:hover{
+    transform:translateY(-3px);
+}
 
-    <h2>Skills</h2>
+/* Sections */
 
-    <div class="skills">
+section{
+    padding:80px 10%;
+}
 
-        <div class="card">Python</div>
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">JavaScript</div>
-        <div class="card">AI</div>
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#38bdf8;
+    font-size:35px;
+}
 
+/* Skills */
 
-    </div>
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
 
-</section>
+.card{
+    background:#1e293b;
+    padding:20px;
+    text-align:center;
+    border-radius:15px;
+    transition:.3s;
+}
 
-<section id="projects">
+.card:hover{
+    transform:translateY(-10px);
+    background:#2563eb;
+}
 
-    <h2>Projects</h2>
+/* Projects */
 
-    <div class="project-container">
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
 
-        <div class="project">
-            <h3>Healthcare Plus Website</h3>
-            <p>Responsive healthcare website using HTML and CSS.</p>
-        </div>
+.project{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+}
 
-        <div class="project">
-            <h3>Travel Booking Form</h3>
-            <p>Travel booking system with attractive UI.</p>
-        </div>
+.project:hover{
+    transform:translateY(-10px);
+}
 
-        <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>Personal portfolio website showcasing skills.</p>
-        </div>
+.project h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
 
-    </div>
+/* Education */
 
-</section>
+.edu{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+}
 
-<section id="education">
+/* Contact */
 
-    <h2>Education</h2>
+#contact{
+    text-align:center;
+}
 
-    <div class="edu">
+#contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
 
-        <h3>B.Tech - Computer Science Engineering</h3>
+/* Footer */
 
-        <p>
-            Ganga Institute of Technology & Management,
-            Jhajjar, Haryana
-        </p>
+footer{
+    background:#020617;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
 
-    </div>
+/* Mobile */
 
-</section>
+@media(max-width:768px){
 
-<section id="contact">
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
 
-    <h2>Contact Me</h2>
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 
-    <p>Email : dhirajahiran8@gmail.com</p>
+    .hero h1{
+        font-size:40px;
+    }
 
-    <p>LinkedIn : Add Your LinkedIn Link</p>
-
-
-</section>
-
-<footer>
-
-    <p>© 2026 Dhiraj Kumar | Portfolio</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+    .hero img{
+        width:180px;
+        height:180px;
+    }
+}
