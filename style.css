@@ -98,6 +98,7 @@ nav a:hover{
 
 .btn:hover{
     transform:translateY(-3px);
+    background:#0ea5e9;
 }
 
 /* Sections */
@@ -113,6 +114,15 @@ section h2{
     font-size:35px;
 }
 
+/* About */
+
+#about p{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+}
+
 /* Skills */
 
 .skills{
@@ -120,15 +130,7 @@ section h2{
     grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
     gap:20px;
 }
-.certificate-card{
-    max-width:500px;
-    margin:20px auto;
-    padding:20px;
-    background:white;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-    text-align:center;
-}
+
 .card{
     background:#1e293b;
     padding:20px;
@@ -166,12 +168,40 @@ section h2{
     margin-bottom:10px;
 }
 
+/* Certificates */
+
+.certificate-card{
+    max-width:550px;
+    margin:20px auto;
+    padding:25px;
+    background:#1e293b;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.certificate-card:hover{
+    transform:translateY(-8px);
+}
+
+.certificate-card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.certificate-card p{
+    color:#ffffff;
+    margin:8px 0;
+}
+
 /* Education */
 
 .edu{
     background:#1e293b;
     padding:25px;
     border-radius:15px;
+    text-align:center;
 }
 
 /* Contact */
@@ -183,6 +213,10 @@ section h2{
 #contact a{
     color:#38bdf8;
     text-decoration:none;
+}
+
+#contact a:hover{
+    text-decoration:underline;
 }
 
 /* Footer */
@@ -216,12 +250,8 @@ footer{
         width:180px;
         height:180px;
     }
-}
-.certificate-card{
-    color: black;
-}
 
-.certificate-card h3,
-.certificate-card p{
-    color: #222;
+    section{
+        padding:60px 5%;
+    }
 }
