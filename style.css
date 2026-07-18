@@ -217,3 +217,11 @@ footer{
         height:180px;
     }
 }
+.certificate-card{
+    color: black;
+}
+
+.certificate-card h3,
+.certificate-card p{
+    color: #222;
+}
