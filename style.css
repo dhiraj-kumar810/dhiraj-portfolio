@@ -94,11 +94,12 @@ nav a:hover{
     text-decoration:none;
     border-radius:30px;
     transition:.3s;
+    font-weight:bold;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
     background:#0ea5e9;
+    transform:translateY(-3px);
 }
 
 /* Sections */
@@ -170,14 +171,21 @@ section h2{
 
 /* Certificates */
 
+.certificate-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
 .certificate-card{
-    max-width:550px;
-    margin:20px auto;
-    padding:25px;
+    width:350px;
     background:#1e293b;
+    padding:25px;
     border-radius:15px;
     text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
     transition:.3s;
 }
 
@@ -187,11 +195,11 @@ section h2{
 
 .certificate-card h3{
     color:#38bdf8;
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 
 .certificate-card p{
-    color:#ffffff;
+    color:white;
     margin:8px 0;
 }
 
@@ -253,5 +261,9 @@ footer{
 
     section{
         padding:60px 5%;
+    }
+
+    .certificate-card{
+        width:100%;
     }
 }
